@@ -87,7 +87,7 @@ module Stomp
         parse_positional_params(login, passcode, host, port, reliable)
 
       @logger = @parameters[:logger] ||= Stomp::NullLogger.new
-      @start_timeout = @parameters[:start_timeout] || 0
+      @start_timeout = @parameters[:start_timeout] || 2
       @parameters[:client_main] = Thread::current
       ## p [ "CLINDBG", @parameters[:client_main] ]
       check_arguments!()
